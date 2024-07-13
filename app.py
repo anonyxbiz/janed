@@ -7,6 +7,7 @@ from os import getpid, kill, environ
 from signal import SIGTERM
 from json import loads
 from cryptography.fernet import Fernet
+from sys import exit
 
 p = print
 
@@ -61,7 +62,7 @@ class Db:
             app.db = name
 
         if not exists(app.db):
-            return
+            open(name, 'w').close()
 
         app.instance = None
 
@@ -141,7 +142,7 @@ class Db:
 # Example
 class App:
     def __init__(app) -> None:
-        app.db = Db()
+        app.db = Db("my.db")
 
     async def __main__(app):
         try:
