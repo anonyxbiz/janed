@@ -6,7 +6,7 @@ with open('requirements.txt') as f:
 
 setup(
     name="janed",
-    version="1.0.0",
+    version="1.0.1",
     description="The json_asynchronous_nosql_encrypted_database is an asynchronous NoSQL database library for Python applications, designed to handle data storage and retrieval securely. It uses JSON format for data representation and integrates encryption and decryption capabilities to ensure data confidentiality.",
     author="Anonyxbiz",
     author_email="biz@anonyxis.life",
